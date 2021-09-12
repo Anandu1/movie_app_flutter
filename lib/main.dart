@@ -111,10 +111,7 @@ class _App extends State<App> {
   void initiateSearch(String val) async{
     print(val);
     final movies = await Provider.of<MovieProvider>(context,listen:false).fetchAllMovies(val);
-    val == null || val =="" ?
-    setState(() {
-      val="";
-    }):
+    
     setState(() {
       Provider.of<MovieProvider>(context,listen:false).Movies = movies;
     });

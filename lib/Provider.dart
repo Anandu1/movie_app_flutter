@@ -44,11 +44,8 @@ class MovieProvider extends ChangeNotifier{
     final movies = await fetchAllMovies("batman");
     Movies = movies;
   }
-
-
   Future<List<Movie>> fetchAllMovies(String name) async {
     final response = await http.get("http://www.omdbapi.com/?s=${name}&page=2&apikey=efcc2117");
-
     if(response.statusCode == 200) {
       final result = jsonDecode(response.body);
       Iterable list = result["Search"];

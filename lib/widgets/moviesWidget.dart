@@ -36,9 +36,18 @@ class MoviesWidget extends StatelessWidget {
                   child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,  
                   children: [
-                  Text(movie.title),
-                  Text(movie.year),
-                    Text(movie.type)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(movie.title,style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.black54),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(movie.year),
+                  ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(movie.type),
+                    )
               ],),
                 ),
             )
